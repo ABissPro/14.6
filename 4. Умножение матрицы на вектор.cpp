@@ -21,12 +21,15 @@ int main()
 		b.push_back(temp);
 	}
 
+	for (int i = 0; i < 4; i++) {
+		c[i] = 0;
+		for (int j = 0; j < 4; j++) {
+			c[i] += a[i][j] * b[j];
+		}
+	}
+
 	std::cout << "Результат:\n";
 	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			c[i][j] = a[i][j] * b[j];
-			std::cout << c[i][j] << " ";
-		}
-		std::cout << std::endl;
+		std::cout << c[i] << " ";
 	}
 }
