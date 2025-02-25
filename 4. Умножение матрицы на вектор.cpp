@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 
 int main()
@@ -6,7 +6,7 @@ int main()
 	system("chcp 1251"); // Установить кодировку
 	float a[4][4];
 	std::vector<float> b;
-	float c[4][4];
+	float c[4]; //вектор-результат
 
 	std::cout << "Введите числа матрицы\n";
 	for (int i = 0; i < 4; i++) {
@@ -20,7 +20,6 @@ int main()
 		std::cin >> temp;
 		b.push_back(temp);
 	}
-
 	for (int i = 0; i < 4; i++) {
 		c[i] = 0;
 		for (int j = 0; j < 4; j++) {
@@ -32,4 +31,5 @@ int main()
 	for (int i = 0; i < 4; i++) {
 		std::cout << c[i] << " ";
 	}
+	
 }
